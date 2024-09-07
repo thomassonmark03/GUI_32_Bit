@@ -1,0 +1,16 @@
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\bin\Debug\net8.0-windows\GUI_32_Bit.exe
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\bin\Debug\net8.0-windows\GUI_32_Bit.deps.json
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\bin\Debug\net8.0-windows\GUI_32_Bit.runtimeconfig.json
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\bin\Debug\net8.0-windows\GUI_32_Bit.dll
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\bin\Debug\net8.0-windows\GUI_32_Bit.pdb
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\obj\Debug\net8.0-windows\GUI_32_Bit.Form1.resources
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\obj\Debug\net8.0-windows\GUI_32_Bit.csproj.GenerateResource.cache
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\obj\Debug\net8.0-windows\GUI_32_Bit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\obj\Debug\net8.0-windows\GUI_32_Bit.AssemblyInfoInputs.cache
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\obj\Debug\net8.0-windows\GUI_32_Bit.AssemblyInfo.cs
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\obj\Debug\net8.0-windows\GUI_32_Bit.csproj.CoreCompileInputs.cache
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\obj\Debug\net8.0-windows\GUI_32_Bit.dll
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\obj\Debug\net8.0-windows\refint\GUI_32_Bit.dll
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\obj\Debug\net8.0-windows\GUI_32_Bit.pdb
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\obj\Debug\net8.0-windows\GUI_32_Bit.genruntimeconfig.cache
+C:\Users\Mark\source\repos\GUI_32_Bit\GUI_32_Bit\obj\Debug\net8.0-windows\ref\GUI_32_Bit.dll
