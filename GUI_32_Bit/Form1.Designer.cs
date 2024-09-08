@@ -118,6 +118,7 @@
             // label_textbox
             // 
             label_textbox.Location = new Point(218, 65);
+            label_textbox.MaxLength = 10;
             label_textbox.Name = "label_textbox";
             label_textbox.Size = new Size(100, 23);
             label_textbox.TabIndex = 7;
@@ -125,7 +126,8 @@
             // 
             // value_textbox
             // 
-            value_textbox.Location = new Point(218, 137);
+            value_textbox.Location = new Point(218, 140);
+            value_textbox.MaxLength = 10;
             value_textbox.Name = "value_textbox";
             value_textbox.Size = new Size(100, 23);
             value_textbox.TabIndex = 9;
@@ -134,6 +136,7 @@
             // startbit_textbox
             // 
             startbit_textbox.Location = new Point(640, 137);
+            startbit_textbox.MaxLength = 10;
             startbit_textbox.Name = "startbit_textbox";
             startbit_textbox.Size = new Size(100, 23);
             startbit_textbox.TabIndex = 12;
@@ -142,6 +145,7 @@
             // scale_factor_textbox
             // 
             scale_factor_textbox.Location = new Point(640, 179);
+            scale_factor_textbox.MaxLength = 10;
             scale_factor_textbox.Name = "scale_factor_textbox";
             scale_factor_textbox.Size = new Size(100, 23);
             scale_factor_textbox.TabIndex = 13;
@@ -193,7 +197,7 @@
             label_error_label.ForeColor = Color.Red;
             label_error_label.Location = new Point(324, 68);
             label_error_label.Name = "label_error_label";
-            label_error_label.Size = new Size(32, 15);
+            label_error_label.Size = new Size(41, 15);
             label_error_label.TabIndex = 18;
             label_error_label.Text = "Empty";
             label_error_label.Visible = false;
@@ -204,7 +208,7 @@
             value_error_label.ForeColor = Color.Red;
             value_error_label.Location = new Point(324, 140);
             value_error_label.Name = "value_error_label";
-            value_error_label.Size = new Size(32, 15);
+            value_error_label.Size = new Size(41, 15);
             value_error_label.TabIndex = 19;
             value_error_label.Text = "Empty";
             value_error_label.Visible = false;
@@ -215,7 +219,7 @@
             start_bit_error_label.ForeColor = Color.Red;
             start_bit_error_label.Location = new Point(755, 140);
             start_bit_error_label.Name = "start_bit_error_label";
-            start_bit_error_label.Size = new Size(32, 15);
+            start_bit_error_label.Size = new Size(41, 15);
             start_bit_error_label.TabIndex = 20;
             start_bit_error_label.Text = "Empty";
             start_bit_error_label.Visible = false;
@@ -226,7 +230,7 @@
             scale_factor_error_label.ForeColor = Color.Red;
             scale_factor_error_label.Location = new Point(755, 182);
             scale_factor_error_label.Name = "scale_factor_error_label";
-            scale_factor_error_label.Size = new Size(32, 15);
+            scale_factor_error_label.Size = new Size(41, 15);
             scale_factor_error_label.TabIndex = 21;
             scale_factor_error_label.Text = "Empty";
             scale_factor_error_label.Visible = false;
@@ -237,7 +241,7 @@
             sdi_error_label.ForeColor = Color.Red;
             sdi_error_label.Location = new Point(324, 102);
             sdi_error_label.Name = "sdi_error_label";
-            sdi_error_label.Size = new Size(32, 15);
+            sdi_error_label.Size = new Size(41, 15);
             sdi_error_label.TabIndex = 22;
             sdi_error_label.Text = "Empty";
             sdi_error_label.Visible = false;
@@ -248,7 +252,7 @@
             ssm_error_label.ForeColor = Color.Red;
             ssm_error_label.Location = new Point(324, 179);
             ssm_error_label.Name = "ssm_error_label";
-            ssm_error_label.Size = new Size(32, 15);
+            ssm_error_label.Size = new Size(41, 15);
             ssm_error_label.TabIndex = 23;
             ssm_error_label.Text = "Empty";
             ssm_error_label.Visible = false;
@@ -259,7 +263,7 @@
             parity_error_label.ForeColor = Color.Red;
             parity_error_label.Location = new Point(324, 217);
             parity_error_label.Name = "parity_error_label";
-            parity_error_label.Size = new Size(32, 15);
+            parity_error_label.Size = new Size(41, 15);
             parity_error_label.TabIndex = 24;
             parity_error_label.Text = "Empty";
             parity_error_label.Visible = false;
