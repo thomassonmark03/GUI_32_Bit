@@ -83,7 +83,7 @@ namespace GUI_32_Bit
             {
                 Decimal scaleFactor = Convert.ToDecimal(scale_factor_textbox.Text);
                 Decimal value = Convert.ToDecimal(value_textbox.Text);
-                Int32 startBit = Convert.ToInt32(startbit_textbox.Text) - 14;
+                Int32 startBit = Convert.ToInt32(startbit_textbox.Text) - 11;
 
 
                 //Find how many bits is available for the data to fit in. 
@@ -255,7 +255,7 @@ namespace GUI_32_Bit
                     Int32 startBit = 0;
                     if (String.Equals(start_bit_error_label.Text, "No Error"))
                     {
-                        startBit = Convert.ToInt32(startbit_textbox.Text) - 14;
+                        startBit = Convert.ToInt32(startbit_textbox.Text) - 11;
                     }
                     Int32 bitSpace = 19 - startBit;
                     Int32 valueCeiling = 1 << (bitSpace);
@@ -318,11 +318,11 @@ namespace GUI_32_Bit
                 {
                     Int32 startBit = Convert.ToInt32(startbit_textbox.Text);
 
-                    //If the start bit value is not between 14 and 29, set the error and tell the user.
+                    //If the start bit value is not between 11 and 29, set the error and tell the user.
                     //Otherwise, the startbit value is okay! Set the error to no error.
-                    if (!(startBit >= 14 && startBit <= 29))
+                    if (!(startBit >= 11 && startBit <= 29))
                     {
-                        start_bit_error_label.Text = "Start bit must be between 14 to 29";
+                        start_bit_error_label.Text = "Start bit must be between 11 to 29";
                         start_bit_error_label.Visible = true;
                     }
                     else
