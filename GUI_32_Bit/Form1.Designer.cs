@@ -145,6 +145,7 @@
             scale_factor_textbox.Name = "scale_factor_textbox";
             scale_factor_textbox.Size = new Size(100, 23);
             scale_factor_textbox.TabIndex = 13;
+            scale_factor_textbox.TextChanged += scale_factor_textbox_TextChanged;
             // 
             // sdi_combobox
             // 
@@ -155,6 +156,7 @@
             sdi_combobox.Name = "sdi_combobox";
             sdi_combobox.Size = new Size(100, 23);
             sdi_combobox.TabIndex = 14;
+            sdi_combobox.SelectedIndexChanged += sdi_combobox_SelectedIndexChanged;
             // 
             // ssm_combobox
             // 

@@ -73,17 +73,25 @@ namespace GUI_32_Bit
             {
                 if (!(string.IsNullOrEmpty(label_textbox.Text)))
                 {
-                    Int32 label_oct = Convert.ToInt32(label_textbox.Text, 8);
-                    if (label_oct >= 256)
+                    if (label_textbox.Text.All(Char.IsDigit))
                     {
-                        label_error_label.Text = "Overflow detected(past 8 bits)";
-                        label_error_label.Visible = true;
+                        Int32 label_oct = Convert.ToInt32(label_textbox.Text, 8);
+                        if (label_oct >= 256)
+                        {
+                            label_error_label.Text = "Overflow detected(past 8 bits)";
+                            label_error_label.Visible = true;
+                        }
+                        else
+                        {
+                            label_error_label.Text = "No Error";
+                            label_error_label.Visible = false;
+
+                        }
                     }
                     else
                     {
-                        label_error_label.Text = "No Error";
-                        label_error_label.Visible = false;
-                        
+                        label_error_label.Text = "Invalid character detected";
+                        label_error_label.Visible = true;
                     }
                 }
                 else
@@ -119,7 +127,7 @@ namespace GUI_32_Bit
                     Decimal value = Convert.ToDecimal(value_textbox.Text);
                     Int32 startBit = 0;
 
-                    if( String.Equals(start_bit_error_label.Text, "No Error" ) )
+                    if (String.Equals(start_bit_error_label.Text, "No Error"))
                     {
                         startBit = Convert.ToInt32(startbit_textbox.Text) - 14;
                     }
@@ -131,11 +139,21 @@ namespace GUI_32_Bit
                         value_error_label.Text = $"Overflow detected(past {bitSpace} bits)";
                         value_error_label.Visible = true;
                     }
+                    else if (value < 0)
+                    {
+                        value_error_label.Text = "Value cannot be negative";
+                        value_error_label.Visible = true;
+                    }
                     else
                     {
                         value_error_label.Text = "No Error";
                         value_error_label.Visible = false;
                     }
+                }
+                else
+                {
+                    value_error_label.Text = "Value is empty";
+                    value_error_label.Visible = false;
                 }
             }
             catch (ArgumentOutOfRangeException err)
@@ -194,5 +212,43 @@ namespace GUI_32_Bit
                 start_bit_error_label.Visible = true;
             }
         }
+
+        private void scale_factor_textbox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!(string.IsNullOrEmpty(scale_factor_textbox.Text)))
+                {
+                    Decimal scaleFactor = Convert.ToDecimal(scale_factor_textbox.Text);
+                    if (scaleFactor < 0)
+                    {
+                        scale_factor_error_label.Text = "Value cannot be negative";
+                        scale_factor_error_label.Visible = true;
+                    }
+                    else
+                    {
+                        scale_factor_error_label.Text = "No Error";
+                        scale_factor_error_label.Visible = false;
+                    }
+                }
+            }
+            catch (ArgumentOutOfRangeException err)
+            {
+                scale_factor_error_label.Text = "Value is empty";
+
+            }
+            catch (FormatException err)
+            {
+                scale_factor_error_label.Text = "Invalid character detected";
+                scale_factor_error_label.Visible = true;
+            }
+            catch (OverflowException err)
+            {
+                scale_factor_error_label.Text = "Overflow detected(outside decimal range)";
+                scale_factor_error_label.Visible = true;
+            }
+        }
+
+
     }
 }
