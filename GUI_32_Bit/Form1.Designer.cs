@@ -156,7 +156,6 @@
             sdi_combobox.Name = "sdi_combobox";
             sdi_combobox.Size = new Size(100, 23);
             sdi_combobox.TabIndex = 14;
-            sdi_combobox.SelectedIndexChanged += sdi_combobox_SelectedIndexChanged;
             // 
             // ssm_combobox
             // 
@@ -196,7 +195,7 @@
             label_error_label.Name = "label_error_label";
             label_error_label.Size = new Size(32, 15);
             label_error_label.TabIndex = 18;
-            label_error_label.Text = "Error";
+            label_error_label.Text = "Empty";
             label_error_label.Visible = false;
             // 
             // value_error_label
@@ -207,7 +206,7 @@
             value_error_label.Name = "value_error_label";
             value_error_label.Size = new Size(32, 15);
             value_error_label.TabIndex = 19;
-            value_error_label.Text = "Error";
+            value_error_label.Text = "Empty";
             value_error_label.Visible = false;
             // 
             // start_bit_error_label
@@ -218,7 +217,7 @@
             start_bit_error_label.Name = "start_bit_error_label";
             start_bit_error_label.Size = new Size(32, 15);
             start_bit_error_label.TabIndex = 20;
-            start_bit_error_label.Text = "Error";
+            start_bit_error_label.Text = "Empty";
             start_bit_error_label.Visible = false;
             // 
             // scale_factor_error_label
@@ -229,7 +228,7 @@
             scale_factor_error_label.Name = "scale_factor_error_label";
             scale_factor_error_label.Size = new Size(32, 15);
             scale_factor_error_label.TabIndex = 21;
-            scale_factor_error_label.Text = "Error";
+            scale_factor_error_label.Text = "Empty";
             scale_factor_error_label.Visible = false;
             // 
             // sdi_error_label
@@ -240,7 +239,7 @@
             sdi_error_label.Name = "sdi_error_label";
             sdi_error_label.Size = new Size(32, 15);
             sdi_error_label.TabIndex = 22;
-            sdi_error_label.Text = "Error";
+            sdi_error_label.Text = "Empty";
             sdi_error_label.Visible = false;
             // 
             // ssm_error_label
@@ -251,7 +250,7 @@
             ssm_error_label.Name = "ssm_error_label";
             ssm_error_label.Size = new Size(32, 15);
             ssm_error_label.TabIndex = 23;
-            ssm_error_label.Text = "Error";
+            ssm_error_label.Text = "Empty";
             ssm_error_label.Visible = false;
             // 
             // parity_error_label
@@ -262,7 +261,7 @@
             parity_error_label.Name = "parity_error_label";
             parity_error_label.Size = new Size(32, 15);
             parity_error_label.TabIndex = 24;
-            parity_error_label.Text = "Error";
+            parity_error_label.Text = "Empty";
             parity_error_label.Visible = false;
             // 
             // Form1

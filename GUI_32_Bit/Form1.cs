@@ -16,49 +16,131 @@ namespace GUI_32_Bit
 
         private void generate_message_button_Click(object sender, EventArgs e)
         {
-            try
+
+            //Combobox error handling
+            bool sdi_no_select = sdi_combobox.SelectedItem == null;
+            bool ssm_no_select = ssm_combobox.SelectedItem == null;
+            bool parity_no_select = parity_combobox.SelectedItem == null;
+
+            //Textbox error handling
+            bool label_error = !String.Equals(label_error_label.Text, "No Error");
+            bool value_error = !String.Equals(value_error_label.Text, "No Error");
+            bool startBit_error = !String.Equals(start_bit_error_label.Text, "No Error");
+            bool scaleFactor_error = !String.Equals(scale_factor_error_label.Text, "No Error");
+
+
+
+            //Generate a pop up error message
+            string generate_message_error_string = "";
+
+            if(label_error)
             {
-                Int32 label = Convert.ToInt32(label_textbox.Text, 8);
-                Int32 sdi = sdi_combobox.SelectedIndex;
-                Decimal value = Convert.ToDecimal(value_textbox.Text);
-                Int32 ssm = ssm_combobox.SelectedIndex;
-                Int32 parity = parity_combobox.SelectedIndex;
-                Int32 startBit = Convert.ToInt32(startbit_textbox.Text);
-                Decimal scaleFactor = Convert.ToDecimal(scale_factor_textbox.Text);
-
-
-
-                //Debug
-                System.Diagnostics.Debug.WriteLine($"Label Value: {label}");
-                System.Diagnostics.Debug.WriteLine($"Sdi Value: {sdi}");
-                System.Diagnostics.Debug.WriteLine($"Decimal Value: {value}");
-                System.Diagnostics.Debug.WriteLine($"Ssm Value: {ssm}");
-                System.Diagnostics.Debug.WriteLine($"Parity Value: {parity}");
-                System.Diagnostics.Debug.WriteLine($"Start Bit Value: {startBit}");
-                System.Diagnostics.Debug.WriteLine($"Scale Factor Value: {scaleFactor}");
-
-
-
-                //Determines data value
-                Int32 data = (Int32)(value / scaleFactor);
-
-                Int32 message = label;
-                message = message | (sdi << 8); //Sets sdi to be at the 8th bit.
-                message = message | (data << (startBit - 1)); //Minus 1 to account for bits starting at 1 instead of 0.
-                message = message | (ssm << 29);
-                message = message | (parity << 31);
-
-                //Debug
-                string messageDec = "Message(dec): " + message.ToString() + "\n\n";
-                string messageHex = "Message(hex): " + message.ToString("X") + "\n\n";
-                System.Diagnostics.Debug.Write(messageDec);
-                System.Diagnostics.Debug.Write(messageHex);
-
-                MessageBox.Show(messageHex + messageDec);
+                generate_message_error_string += "Label Error: " + label_error_label.Text + "\n";
             }
-            catch (Exception err)
+
+            if (sdi_no_select)
             {
-                System.Diagnostics.Debug.WriteLine(err.ToString());
+                generate_message_error_string += "SDI Error: No Selection\n";
+            }
+
+            if(value_error)
+            {
+                generate_message_error_string += "Value Error: " + value_error_label.Text + "\n";
+            }
+
+            if (ssm_no_select)
+            {
+                generate_message_error_string += "SSM Error: No Selection\n";
+            }
+
+            if (parity_no_select)
+            {
+                generate_message_error_string += "Parity Error: No Selection\n";
+            }
+
+            if (startBit_error)
+            {
+                generate_message_error_string += "Start bit error:" + start_bit_error_label.Text + "\n";
+            }
+
+            if (scaleFactor_error)
+            {
+                generate_message_error_string += "Scale factor error:" + scale_factor_error_label.Text + "\n";
+            }
+
+
+            //Out of bounds for scale factor and value factor multiplied
+            if( !(value_error && scaleFactor_error && startBit_error) )
+            {
+                Decimal scaleFactor = Convert.ToDecimal(scale_factor_textbox.Text);
+                Decimal value = Convert.ToDecimal(value_textbox.Text);
+                Int32 startBit = Convert.ToInt32(startbit_textbox.Text) - 14;
+
+                Int32 bitSpace = 19 - startBit;
+                Int32 valueCeiling = 1 << (bitSpace);
+
+                Int32 totalValue = (Int32)(value / scaleFactor);
+
+                if(totalValue >= valueCeiling)
+                {
+                    generate_message_error_string += $"Error, value divided by scale factor is: {totalValue}\n";
+                    generate_message_error_string += $"Value bit space is {bitSpace} bits\n";
+                    generate_message_error_string += $"Thus value must be under {valueCeiling}\n";
+                }
+
+
+
+
+            }
+
+
+            if ( !( String.IsNullOrEmpty( generate_message_error_string) ) )
+            {
+                MessageBox.Show(generate_message_error_string);
+            }
+            else
+            {
+                    Int32 label = Convert.ToInt32(label_textbox.Text, 8);
+                    Decimal value = Convert.ToDecimal(value_textbox.Text);
+                    Int32 startBit = Convert.ToInt32(startbit_textbox.Text);
+                    Decimal scaleFactor = Convert.ToDecimal(scale_factor_textbox.Text);
+
+                    Int32 sdi = sdi_combobox.SelectedIndex;
+                    Int32 ssm = ssm_combobox.SelectedIndex;
+                    Int32 parity = parity_combobox.SelectedIndex;
+
+
+
+
+
+                    //Debug
+                    System.Diagnostics.Debug.WriteLine($"Label Value: {label}");
+                    System.Diagnostics.Debug.WriteLine($"Sdi Value: {sdi}");
+                    System.Diagnostics.Debug.WriteLine($"Decimal Value: {value}");
+                    System.Diagnostics.Debug.WriteLine($"Ssm Value: {ssm}");
+                    System.Diagnostics.Debug.WriteLine($"Parity Value: {parity}");
+                    System.Diagnostics.Debug.WriteLine($"Start Bit Value: {startBit}");
+                    System.Diagnostics.Debug.WriteLine($"Scale Factor Value: {scaleFactor}");
+
+
+
+                    //Determines data value
+                    Int32 data = (Int32)(value / scaleFactor);
+
+                    Int32 message = label;
+                    message = message | (sdi << 8); //Sets sdi to be at the 8th bit.
+                    message = message | (data << (startBit - 1)); //Minus 1 to account for bits starting at 1 instead of 0.
+                    message = message | (ssm << 29);
+                    message = message | (parity << 31);
+
+                    //Debug
+                    string messageDec = "Message(dec): " + message.ToString() + "\n\n";
+                    string messageHex = "Message(hex): " + message.ToString("X") + "\n\n";
+                    System.Diagnostics.Debug.Write(messageDec);
+                    System.Diagnostics.Debug.Write(messageHex);
+
+                    MessageBox.Show(messageHex + messageDec);
+            
             }
 
 
