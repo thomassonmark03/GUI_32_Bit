@@ -79,7 +79,7 @@ namespace GUI_32_Bit
 
 
             //Out of bounds for scale factor and value factor multiplied
-            if( !(value_error && scaleFactor_error && startBit_error) )
+            if( !(value_error || scaleFactor_error || startBit_error) )
             {
                 Decimal scaleFactor = Convert.ToDecimal(scale_factor_textbox.Text);
                 Decimal value = Convert.ToDecimal(value_textbox.Text);
