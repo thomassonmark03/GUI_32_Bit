@@ -43,6 +43,13 @@
             ssm_combobox = new ComboBox();
             parity_combobox = new ComboBox();
             generate_message_button = new Button();
+            label_error_label = new Label();
+            value_error_label = new Label();
+            start_bit_error_label = new Label();
+            scale_factor_error_label = new Label();
+            sdi_error_label = new Label();
+            ssm_error_label = new Label();
+            parity_error_label = new Label();
             SuspendLayout();
             // 
             // label_label
@@ -93,7 +100,7 @@
             // start_bit_label
             // 
             start_bit_label.AutoSize = true;
-            start_bit_label.Location = new Point(417, 137);
+            start_bit_label.Location = new Point(532, 140);
             start_bit_label.Name = "start_bit_label";
             start_bit_label.Size = new Size(48, 15);
             start_bit_label.TabIndex = 5;
@@ -102,7 +109,7 @@
             // scale_factor_label
             // 
             scale_factor_label.AutoSize = true;
-            scale_factor_label.Location = new Point(417, 176);
+            scale_factor_label.Location = new Point(532, 179);
             scale_factor_label.Name = "scale_factor_label";
             scale_factor_label.Size = new Size(70, 15);
             scale_factor_label.TabIndex = 6;
@@ -126,7 +133,7 @@
             // 
             // startbit_textbox
             // 
-            startbit_textbox.Location = new Point(525, 134);
+            startbit_textbox.Location = new Point(640, 137);
             startbit_textbox.Name = "startbit_textbox";
             startbit_textbox.Size = new Size(100, 23);
             startbit_textbox.TabIndex = 12;
@@ -134,11 +141,10 @@
             // 
             // scale_factor_textbox
             // 
-            scale_factor_textbox.Location = new Point(525, 176);
+            scale_factor_textbox.Location = new Point(640, 179);
             scale_factor_textbox.Name = "scale_factor_textbox";
             scale_factor_textbox.Size = new Size(100, 23);
             scale_factor_textbox.TabIndex = 13;
-            scale_factor_textbox.TextChanged += scale_factor_textbox_TextChanged;
             // 
             // sdi_combobox
             // 
@@ -149,7 +155,6 @@
             sdi_combobox.Name = "sdi_combobox";
             sdi_combobox.Size = new Size(100, 23);
             sdi_combobox.TabIndex = 14;
-            sdi_combobox.SelectedIndexChanged += sdi_combobox_SelectedIndexChanged;
             // 
             // ssm_combobox
             // 
@@ -160,7 +165,6 @@
             ssm_combobox.Name = "ssm_combobox";
             ssm_combobox.Size = new Size(100, 23);
             ssm_combobox.TabIndex = 15;
-            ssm_combobox.SelectedIndexChanged += ssm_combobox_SelectedIndexChanged;
             // 
             // parity_combobox
             // 
@@ -171,11 +175,10 @@
             parity_combobox.Name = "parity_combobox";
             parity_combobox.Size = new Size(100, 23);
             parity_combobox.TabIndex = 16;
-            parity_combobox.SelectedIndexChanged += parity_combobox_SelectedIndexChanged;
             // 
             // generate_message_button
             // 
-            generate_message_button.Location = new Point(335, 364);
+            generate_message_button.Location = new Point(460, 419);
             generate_message_button.Name = "generate_message_button";
             generate_message_button.Size = new Size(142, 51);
             generate_message_button.TabIndex = 17;
@@ -183,12 +186,96 @@
             generate_message_button.UseVisualStyleBackColor = true;
             generate_message_button.Click += generate_message_button_Click;
             // 
+            // label_error_label
+            // 
+            label_error_label.AutoSize = true;
+            label_error_label.ForeColor = Color.Red;
+            label_error_label.Location = new Point(324, 68);
+            label_error_label.Name = "label_error_label";
+            label_error_label.Size = new Size(32, 15);
+            label_error_label.TabIndex = 18;
+            label_error_label.Text = "Error";
+            label_error_label.Visible = false;
+            // 
+            // value_error_label
+            // 
+            value_error_label.AutoSize = true;
+            value_error_label.ForeColor = Color.Red;
+            value_error_label.Location = new Point(324, 140);
+            value_error_label.Name = "value_error_label";
+            value_error_label.Size = new Size(32, 15);
+            value_error_label.TabIndex = 19;
+            value_error_label.Text = "Error";
+            value_error_label.Visible = false;
+            // 
+            // start_bit_error_label
+            // 
+            start_bit_error_label.AutoSize = true;
+            start_bit_error_label.ForeColor = Color.Red;
+            start_bit_error_label.Location = new Point(755, 140);
+            start_bit_error_label.Name = "start_bit_error_label";
+            start_bit_error_label.Size = new Size(32, 15);
+            start_bit_error_label.TabIndex = 20;
+            start_bit_error_label.Text = "Error";
+            start_bit_error_label.Visible = false;
+            // 
+            // scale_factor_error_label
+            // 
+            scale_factor_error_label.AutoSize = true;
+            scale_factor_error_label.ForeColor = Color.Red;
+            scale_factor_error_label.Location = new Point(755, 182);
+            scale_factor_error_label.Name = "scale_factor_error_label";
+            scale_factor_error_label.Size = new Size(32, 15);
+            scale_factor_error_label.TabIndex = 21;
+            scale_factor_error_label.Text = "Error";
+            scale_factor_error_label.Visible = false;
+            // 
+            // sdi_error_label
+            // 
+            sdi_error_label.AutoSize = true;
+            sdi_error_label.ForeColor = Color.Red;
+            sdi_error_label.Location = new Point(324, 102);
+            sdi_error_label.Name = "sdi_error_label";
+            sdi_error_label.Size = new Size(32, 15);
+            sdi_error_label.TabIndex = 22;
+            sdi_error_label.Text = "Error";
+            sdi_error_label.Visible = false;
+            // 
+            // ssm_error_label
+            // 
+            ssm_error_label.AutoSize = true;
+            ssm_error_label.ForeColor = Color.Red;
+            ssm_error_label.Location = new Point(324, 179);
+            ssm_error_label.Name = "ssm_error_label";
+            ssm_error_label.Size = new Size(32, 15);
+            ssm_error_label.TabIndex = 23;
+            ssm_error_label.Text = "Error";
+            ssm_error_label.Visible = false;
+            // 
+            // parity_error_label
+            // 
+            parity_error_label.AutoSize = true;
+            parity_error_label.ForeColor = Color.Red;
+            parity_error_label.Location = new Point(324, 217);
+            parity_error_label.Name = "parity_error_label";
+            parity_error_label.Size = new Size(32, 15);
+            parity_error_label.TabIndex = 24;
+            parity_error_label.Text = "Error";
+            parity_error_label.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1069, 555);
+            Controls.Add(parity_error_label);
+            Controls.Add(ssm_error_label);
+            Controls.Add(sdi_error_label);
+            Controls.Add(scale_factor_error_label);
+            Controls.Add(start_bit_error_label);
+            Controls.Add(value_error_label);
+            Controls.Add(label_error_label);
             Controls.Add(generate_message_button);
             Controls.Add(parity_combobox);
             Controls.Add(ssm_combobox);
@@ -228,5 +315,12 @@
         private ComboBox ssm_combobox;
         private ComboBox parity_combobox;
         private Button generate_message_button;
+        private Label label_error_label;
+        private Label value_error_label;
+        private Label start_bit_error_label;
+        private Label scale_factor_error_label;
+        private Label sdi_error_label;
+        private Label ssm_error_label;
+        private Label parity_error_label;
     }
 }

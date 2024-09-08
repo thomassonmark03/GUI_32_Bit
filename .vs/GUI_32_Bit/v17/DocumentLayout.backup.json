@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{3F4F201C-1520-45D1-B328-C5343C64131E}|GUI_32_Bit\\GUI_32_Bit.csproj|solutionrelative:gui_32_bit\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F4F201C-1520-45D1-B328-C5343C64131E}|GUI_32_Bit\\GUI_32_Bit.csproj|c:\\users\\mark\\source\\repos\\gui_32_bit\\gui_32_bit\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F4F201C-1520-45D1-B328-C5343C64131E}|GUI_32_Bit\\GUI_32_Bit.csproj|solutionrelative:gui_32_bit\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3F4F201C-1520-45D1-B328-C5343C64131E}|GUI_32_Bit\\GUI_32_Bit.csproj|c:\\users\\mark\\source\\repos\\gui_32_bit\\gui_32_bit\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3F4F201C-1520-45D1-B328-C5343C64131E}|GUI_32_Bit\\GUI_32_Bit.csproj|solutionrelative:gui_32_bit\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3F4F201C-1520-45D1-B328-C5343C64131E}|GUI_32_Bit\\GUI_32_Bit.csproj|c:\\users\\mark\\source\\repos\\gui_32_bit\\gui_32_bit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F4F201C-1520-45D1-B328-C5343C64131E}|GUI_32_Bit\\GUI_32_Bit.csproj|solutionrelative:gui_32_bit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F4F201C-1520-45D1-B328-C5343C64131E}|GUI_32_Bit\\GUI_32_Bit.csproj|c:\\users\\mark\\source\\repos\\gui_32_bit\\gui_32_bit\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F4F201C-1520-45D1-B328-C5343C64131E}|GUI_32_Bit\\GUI_32_Bit.csproj|solutionrelative:gui_32_bit\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,9 +34,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Mark\\source\\repos\\GUI_32_Bit\\GUI_32_Bit\\Form1.cs",
               "RelativeDocumentMoniker": "GUI_32_Bit\\Form1.cs",
-              "ToolTip": "C:\\Users\\Mark\\source\\repos\\GUI_32_Bit\\GUI_32_Bit\\Form1.cs*",
-              "RelativeToolTip": "GUI_32_Bit\\Form1.cs*",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAgwF8AAAAzAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Mark\\source\\repos\\GUI_32_Bit\\GUI_32_Bit\\Form1.cs",
+              "RelativeToolTip": "GUI_32_Bit\\Form1.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAQwKkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T18:47:38.282Z",
               "IsPinned": true,
@@ -48,20 +48,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Mark\\source\\repos\\GUI_32_Bit\\GUI_32_Bit\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "GUI_32_Bit\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\Mark\\source\\repos\\GUI_32_Bit\\GUI_32_Bit\\Form1.Designer.cs",
               "RelativeToolTip": "GUI_32_Bit\\Form1.Designer.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAowJYAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAowK4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T21:04:43.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Mark\\source\\repos\\GUI_32_Bit\\GUI_32_Bit\\Program.cs",
               "RelativeDocumentMoniker": "GUI_32_Bit\\Program.cs",
@@ -74,12 +74,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mark\\source\\repos\\GUI_32_Bit\\GUI_32_Bit\\Form1.cs",
               "RelativeDocumentMoniker": "GUI_32_Bit\\Form1.cs",
-              "ToolTip": "C:\\Users\\Mark\\source\\repos\\GUI_32_Bit\\GUI_32_Bit\\Form1.cs [Design]*",
-              "RelativeToolTip": "GUI_32_Bit\\Form1.cs [Design]*",
+              "ToolTip": "C:\\Users\\Mark\\source\\repos\\GUI_32_Bit\\GUI_32_Bit\\Form1.cs [Design]",
+              "RelativeToolTip": "GUI_32_Bit\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T18:44:43.277Z",
               "EditorCaption": " [Design]"
